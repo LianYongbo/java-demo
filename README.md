@@ -57,3 +57,22 @@ auth.inMemoryAuthentication()
 11. 登录成功后可以访问对应权限内的接口
 
 需要注意：security中的角色需要前缀``ROLE_``，如果没有这个前缀，security就认为没有权限，因此，可以在数据库中添加前缀，也可以在``loadUserByUsername``内设置用户的roles属性时添加。
+
+## securitydcp：spring boot + spring security + mongodb 实现动态配置权限
+
+实现动态配置接口权限
+
+1. 创建spring boot项目，加入web/spring security/mongodb依赖
+2. application.yml中配置端口号，配置mongodb地址以及数据库
+3. 创建model：User、Role、Menu、User_Role、Role_Menu
+4. 创建dao
+5. 编写测试类插入数据
+6. 创建service
+7. 创建config：SecurityConfig
+8. 启动项目：成功登录
+9. **编写MyFilter：``Collection<ConfigAttribute> getAttributes(Object o)``方法用来根据请求地址o查询得到访问该地址所需的角色并返回这些角色**
+10. **编写MyAccessDecisionManager：``void decide(Authentication authentication, Object o, Collection<ConfigAttribute> collection)``方法用来判断用户所拥有的角色是否满足访问所要求的角色**
+11. 创建controller
+12. 启动项目：能够正确访问权限内的路径
+
+需要注意：security中凡是涉及到角色的，都要求角色有``ROLE_``字段，否则判定为不拥有该角色。
