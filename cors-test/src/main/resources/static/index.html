@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS访问</title>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<input type="button" value="GBT" onclick="getData()">
+<script>
+    function getData() {
+        $.get('http://localhost:8101/hello', function (msg) {
+            $("#app").html(msg);
+        });
+    }
+</script>
+</body>
+</html>
