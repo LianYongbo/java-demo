@@ -76,3 +76,22 @@ auth.inMemoryAuthentication()
 12. 启动项目：能够正确访问权限内的路径
 
 需要注意：security中凡是涉及到角色的，都要求角色有``ROLE_``字段，否则判定为不拥有该角色。
+
+## cors cors-test：实现跨域并测试
+
+1. 在spring boot中，可以在controller方法或类上添加注解``@CrossOrigin(origins = "*")``实现跨域
+
+2. 实现``WebMvcConfigurer``
+
+``
+@Configuration
+public class WebMvcConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*")
+                .allowedHeaders("*")
+                .allowedMethods("*");
+    } 
+}
+``
