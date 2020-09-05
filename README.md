@@ -14,19 +14,19 @@
 添加内存用户
 1. 在SecurityConfig中重写``void configure(AuthenticationManagerBuilder auth)``。
 
-``
+```java
 auth.inMemoryAuthentication()
                 .withUser("lian").password("123").roles("admin");
-``
+```
 
 2. 添加的用户密码未加密，在SecurityConfig中添加方法``PasswordEncoder passwordEncoder()``，允许使用未加密的密码进行校验。
 
-``
+```java
 @Bean
     public PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }
-``
+```
 
 配置表单登录、登录成功/失败、登出成功
 1. 在SecurityConfig中重写``void configure(HttpSecurity http)``。其中，``.loginProcessingUrl("/doLogin")``表示登录的路径，框架默认是``/login``；``.loginPage("/login")``表示登录的页面，在前后端分离的项目中可以认为是接口。
@@ -44,13 +44,13 @@ auth.inMemoryAuthentication()
 7. 创建controller：UserController中包含多个接口
 8. **创建config：SecurityConfig配置；权限配置部分**
 
-``
+```java
 .antMatchers("/admin/**").hasRole("admin")  
 .antMatchers("/dba/**").hasRole("dba")  
 .antMatchers("/user/**").hasRole("user")  
 .antMatchers("/hello").hasAnyRole("admin","dba","user")
 .anyRequest().authenticated();  
-``
+```
 
 9. 启动项目
 10. 使用数据库中的用户登录
@@ -83,7 +83,7 @@ auth.inMemoryAuthentication()
 
 2. 实现``WebMvcConfigurer``
 
-``
+```java
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
     @Override
@@ -94,4 +94,4 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .allowedMethods("*");
     } 
 }
-``
+```
