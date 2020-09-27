@@ -28,7 +28,7 @@ public class MyFilter implements FilterInvocationSecurityMetadataSource {
     //路径匹配
     AntPathMatcher pathMatcher = new AntPathMatcher();
 
-    //根据地址分析需要哪些角色才能访问
+    //根据地址获取该地址需要哪些角色才能访问
     @Override
     public Collection<ConfigAttribute> getAttributes(Object o) throws IllegalArgumentException {
         //o包含请求的信息
@@ -53,7 +53,6 @@ public class MyFilter implements FilterInvocationSecurityMetadataSource {
         return SecurityConfig.createList("ROLE_login");
     }
 
-    //根据需要的角色对比用户具有的角色
     @Override
     public Collection<ConfigAttribute> getAllConfigAttributes() {
         return null;

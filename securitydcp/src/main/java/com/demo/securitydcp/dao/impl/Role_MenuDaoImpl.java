@@ -1,5 +1,6 @@
-package com.demo.securitydcp.dao;
+package com.demo.securitydcp.dao.impl;
 
+import com.demo.securitydcp.dao.Role_MenuDao;
 import com.demo.securitydcp.model.Menu;
 import com.demo.securitydcp.model.Role_Menu;
 import org.springframework.beans.factory.annotation.Autowired;

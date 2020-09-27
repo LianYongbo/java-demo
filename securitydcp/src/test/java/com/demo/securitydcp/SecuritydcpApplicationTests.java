@@ -58,17 +58,17 @@ class SecuritydcpApplicationTests {
 //        menuDao.saveMenu(menu1);
 //        menuDao.saveMenu(menu2);
 
-        Role_Menu role_menu = new Role_Menu(1,1,1);
-        Role_Menu role_menu1 = new Role_Menu(2,1,3);
-        Role_Menu role_menu2 = new Role_Menu(3,2,2);
-        Role_Menu role_menu3 = new Role_Menu(4,2,3);
-        Role_Menu role_menu4 = new Role_Menu(5,3,3);
-
-        rmDao.saveRecording(role_menu);
-        rmDao.saveRecording(role_menu1);
-        rmDao.saveRecording(role_menu2);
-        rmDao.saveRecording(role_menu3);
-        rmDao.saveRecording(role_menu4);
+//        Role_Menu role_menu = new Role_Menu(1,1,1);
+//        Role_Menu role_menu1 = new Role_Menu(2,1,3);
+//        Role_Menu role_menu2 = new Role_Menu(3,2,2);
+//        Role_Menu role_menu3 = new Role_Menu(4,2,3);
+//        Role_Menu role_menu4 = new Role_Menu(5,3,3);
+//
+//        rmDao.saveRecording(role_menu);
+//        rmDao.saveRecording(role_menu1);
+//        rmDao.saveRecording(role_menu2);
+//        rmDao.saveRecording(role_menu3);
+//        rmDao.saveRecording(role_menu4);
     }
 
 }

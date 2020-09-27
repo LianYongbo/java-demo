@@ -1,5 +1,6 @@
-package com.demo.securitydcp.dao;
+package com.demo.securitydcp.dao.impl;
 
+import com.demo.securitydcp.dao.UserDao;
 import com.demo.securitydcp.model.Role;
 import com.demo.securitydcp.model.User;
 import com.demo.securitydcp.model.User_Role;

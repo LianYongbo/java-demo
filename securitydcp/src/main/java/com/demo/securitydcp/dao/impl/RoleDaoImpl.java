@@ -1,5 +1,6 @@
-package com.demo.securitydcp.dao;
+package com.demo.securitydcp.dao.impl;
 
+import com.demo.securitydcp.dao.RoleDao;
 import com.demo.securitydcp.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;

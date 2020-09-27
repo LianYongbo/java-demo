@@ -1,5 +1,6 @@
-package com.demo.securitydcp.dao;
+package com.demo.securitydcp.dao.impl;
 
+import com.demo.securitydcp.dao.MenuDao;
 import com.demo.securitydcp.model.Menu;
 import com.demo.securitydcp.model.Role;
 import com.demo.securitydcp.model.Role_Menu;

@@ -1,8 +1,9 @@
-package com.demo.securitydcp.service;
+package com.demo.securitydcp.service.impl;
 
 import com.demo.securitydcp.dao.MenuDao;
 import com.demo.securitydcp.model.Menu;
 import com.demo.securitydcp.model.Role;
+import com.demo.securitydcp.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

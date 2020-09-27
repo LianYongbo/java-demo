@@ -33,6 +33,16 @@ public class User implements UserDetails {
         this.user_password = user_password;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "user_id=" + user_id +
+                ", user_name='" + user_name + '\'' +
+                ", user_password='" + user_password + '\'' +
+                ", roles=" + roles +
+                '}';
+    }
+
     public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
