@@ -2,7 +2,6 @@ package com.demo.securitydmroleandmenu.dao.impl;
 
 import com.demo.securitydmroleandmenu.dao.MenuDao;
 import com.demo.securitydmroleandmenu.model.Menu;
-import com.sun.xml.internal.ws.api.model.MEP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

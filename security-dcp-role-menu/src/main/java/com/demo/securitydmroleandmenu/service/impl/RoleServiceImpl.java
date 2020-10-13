@@ -52,9 +52,10 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public Object roleDelete(Role role) {
-        if (role.getRole_id() == null || role.getRole_id().toString().equals("")) {
-            return "角色编号为空!";
+        if (role.getRole_objectid() == null || role.getRole_objectid().equals("")) {
+            return "角色编号为空！";
         }
+        role.setRole_id(new ObjectId(role.getRole_objectid()));
         if (roleDao.roleFindById(role.getRole_id()) == null) {
             return "该角色不存在！";
         }

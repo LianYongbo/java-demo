@@ -36,7 +36,7 @@ public class RoleDaoImpl implements RoleDao {
 
     @Override
     public Boolean roleDelete(Role role) {
-        return mongoTemplate.remove(new Query(Criteria.where("role_id").is(role.getRole_id()))).wasAcknowledged();
+        return mongoTemplate.remove(role).wasAcknowledged();
     }
 
     @Override
